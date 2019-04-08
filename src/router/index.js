@@ -4,12 +4,10 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const asyncRouterMap = [
-  { path: '/login', component: import('@/views/login/index') }
+  { path: 'login', component: import('@/views/login') }
 ]
 
-const router = new Router({
+export default new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: asyncRouterMap
 })
-
-export default router
